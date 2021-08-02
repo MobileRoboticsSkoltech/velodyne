@@ -81,7 +81,7 @@ rclcpp::Time rosTimeFromGpsTimestamp(rclcpp::Time & time_nom, const uint8_t * co
 //    (cur_hour * HOUR_TO_SEC) + (usecs / 1000000),
 //    (usecs % 1000000) * 1000);
 
-    ros::clcpp::Time stamp = ros::clcpp::Time((usecs / 1000000), (usecs % 1000000) * 1000);
+    rclcpp::Time stamp = rclcpp::Time((usecs / 1000000), (usecs % 1000000) * 1000);
 
 //  return resolveHourAmbiguity(stamp, time_nom);
   return stamp;
